@@ -35,29 +35,32 @@ export function GatekeeperList() {
     }
   };
 
-  const handlePressure = (councillor: Councillor) => {
-    const subject = encodeURIComponent("URGENT: Vote NO on Repealing Rezoning");
-    const body = encodeURIComponent(
-      `Dear Councillor ${councillor.name},\n\n` +
-      `I am writing to urge you to vote AGAINST repealing Calgary's rezoning bylaws at the March 23, 2026 Public Hearing.\n\n` +
-      `Repealing this policy would:\n` +
-      `• Cost Calgary $861 MILLION in federal housing funding\n` +
-      `• Force property tax increases on homeowners like me\n` +
-      `• Restrict property rights and housing choice\n` +
-      `• Prevent market-based solutions to housing affordability\n\n` +
-      `As a Calgary taxpayer, I demand you protect our federal funding and vote NO on the repeal.\n\n` +
-      `Sincerely,\n[Your Name]\n[Your Address]`
-    );
-
-    const mailtoLink = `mailto:${councillor.email}?subject=${subject}&body=${body}`;
-    window.open(mailtoLink, '_self');
-  };
-
   const handleTwitter = (twitter: string) => {
     const tweetText = encodeURIComponent(
       `${twitter} Don't burn $861M of our federal housing money! Vote NO on repealing rezoning. Calgary taxpayers are watching! #StopTheBan #yyccc`
     );
     window.open(`https://twitter.com/intent/tweet?text=${tweetText}`, '_blank');
+  };
+
+  const handleShare = () => {
+    if (navigator.share) {
+      navigator.share({
+        title: 'CCHC - Stop the $1 Billion Taxpayer Penalty',
+        url: window.location.href,
+      });
+    } else {
+      // Fallback to Twitter share
+      const text = encodeURIComponent(
+        "I just checked my Tax Penalty on CCHC.ca. Calgary can't afford to lose $861M in federal funding! #StopTheBan #yyccc"
+      );
+      const url = encodeURIComponent(window.location.href);
+      window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+    }
+  };
+
+  const handleDownloadTemplate = () => {
+    // Open the Calgary contact form
+    window.open('https://www.calgary.ca/council/dyncrm-councillors-contact.html', '_blank');
   };
 
   return (
@@ -121,15 +124,29 @@ export function GatekeeperList() {
                   </div>
 
                   <div className="pt-3 space-y-2">
-                    <Button
-                      onClick={() => handlePressure(councillor)}
-                      variant="gold"
-                      size="sm"
-                      className="w-full"
+                    <a
+                      href={`mailto:${councillor.email}?subject=${encodeURIComponent("URGENT: Vote NO on Repealing Rezoning")}&body=${encodeURIComponent(
+                        `Dear Councillor ${councillor.name},\n\n` +
+                        `I am writing to urge you to vote AGAINST repealing Calgary's rezoning bylaws at the March 23, 2026 Public Hearing.\n\n` +
+                        `Repealing this policy would:\n` +
+                        `• Cost Calgary $861 MILLION in federal housing funding\n` +
+                        `• Force property tax increases on homeowners like me\n` +
+                        `• Restrict property rights and housing choice\n` +
+                        `• Prevent market-based solutions to housing affordability\n\n` +
+                        `As a Calgary taxpayer, I demand you protect our federal funding and vote NO on the repeal.\n\n` +
+                        `Sincerely,\n[Your Name]\n[Your Address]`
+                      )}`}
+                      className="block"
                     >
-                      <Mail className="mr-2 h-4 w-4" />
-                      Email This Office
-                    </Button>
+                      <Button
+                        variant="gold"
+                        size="sm"
+                        className="w-full"
+                      >
+                        <Mail className="mr-2 h-4 w-4" />
+                        Email This Office
+                      </Button>
+                    </a>
                     <Button
                       onClick={() => handleTwitter(councillor.twitter)}
                       variant="outline"
@@ -165,10 +182,15 @@ export function GatekeeperList() {
               Let them know that Calgary taxpayers are watching their vote on March 23rd.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
-              <Button variant="gold" size="lg">
-                Download Email Template
+              <Button variant="gold" size="lg" onClick={handleDownloadTemplate}>
+                Contact Your Councillor
               </Button>
-              <Button variant="outline" size="lg" className="border-2 border-cchc-blue text-cchc-blue">
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-2 border-cchc-blue text-cchc-blue"
+                onClick={handleShare}
+              >
                 Share This Page
               </Button>
             </div>

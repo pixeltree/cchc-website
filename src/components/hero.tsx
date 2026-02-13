@@ -66,6 +66,7 @@ export function Hero() {
               variant="outline"
               size="xl"
               className="text-lg bg-transparent border-2 border-white text-white hover:bg-white hover:text-cchc-blue"
+              onClick={() => window.open('https://www.calgary.ca/council/dyncrm-councillors-contact.html', '_blank')}
             >
               Send Letter to Council
             </Button>
