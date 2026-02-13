@@ -17,16 +17,10 @@ export function TaxCalculator() {
       return;
     }
 
-    // Calculation: $861M spread across Calgary households (~480,000)
-    // That's ~$1,793 per household base
-    // Then calculate based on property value proportion
-    // Assuming average Calgary home is $550,000
-    const averageHome = 550000;
-    const basePerHousehold = 1793;
-    const proportionalPenalty = (value / averageHome) * basePerHousehold;
-
-    // 5-year recovery period means annual increase
-    const annualPenalty = proportionalPenalty / 5;
+    // New formula: (Home Value * 0.0125) / 5
+    // This represents the estimated property tax surcharge needed to recover
+    // the $861M federal loss over a 5-year period
+    const annualPenalty = (value * 0.0125) / 5;
 
     setPenalty(Math.round(annualPenalty));
   };
@@ -142,9 +136,9 @@ export function TaxCalculator() {
 
                 <div className="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
                   <p className="text-sm text-gray-700">
-                    <strong>How we calculate:</strong> The $861 million federal funding loss would need to be
-                    recovered through property taxes over 5 years. This calculator estimates your share based
-                    on your home value relative to the Calgary average.
+                    <strong>How we calculate:</strong> Based on the estimated property tax surcharge needed to
+                    recover the $861 million federal funding loss over 5 years. Your annual increase is calculated
+                    as (Home Value × 1.25%) ÷ 5 years.
                   </p>
                 </div>
               </div>

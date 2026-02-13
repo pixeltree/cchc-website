@@ -22,6 +22,30 @@
     "contact_id": "13"
   },
   {
+    "id": "ward14",
+    "name": "Landon Johnston",
+    "ward": "Ward 14",
+    "riskLevel": "Critical",
+    "tag": "Swing Vote",
+    "description": "The Recall Renegade",
+    "email": "ward14@calgary.ca",
+    "twitter": "@LandonYYC",
+    "risk_description": "Anti-incumbent stance; likely to vote for repeal to satisfy base of 'Recall' supporters.",
+    "contact_id": "14"
+  },
+  {
+    "id": "ward5",
+    "name": "Raj Dhaliwal",
+    "ward": "Ward 5",
+    "riskLevel": "Critical",
+    "tag": "Swing Vote",
+    "description": "Fence-Sitting Incumbent",
+    "email": "ward5@calgary.ca",
+    "twitter": "@RajDhaliwalYYC",
+    "risk_description": "Incumbent balancing ward pressure; needs to see the 'Taxpayer Penalty' numbers.",
+    "contact_id": "5"
+  },
+  {
     "id": "mayor",
     "name": "Jeromy Farkas",
     "ward": "Mayor",
@@ -37,7 +61,7 @@
     "name": "Jennifer Wyness",
     "ward": "Ward 2",
     "riskLevel": "High",
-    "tag": "Amendment Advocate",
+    "tag": "The Fiscal Contradiction",
     "email": "ward2@calgary.ca",
     "twitter": "@JenniferWyness",
     "risk_description": "Consistently skeptical of city-wide mandates; likely to support 'exclusionary' tweaks.",
@@ -52,18 +76,7 @@
     "email": "ward1@calgary.ca",
     "twitter": "@KimTyersYYC",
     "risk_description": "Ran on a Communities First platform to repeal blanket rezoning.",
-    "contact_id": "1"
-  },
-  {
-    "id": "ward14",
-    "name": "Landon Johnston",
-    "ward": "Ward 14",
-    "riskLevel": "High",
-    "tag": "The Wildcard",
-    "email": "ward14@calgary.ca",
-    "twitter": "@LandonYYC",
-    "risk_description": "Anti-incumbent stance; likely to vote for repeal to satisfy base of 'Recall' supporters.",
-    "contact_id": "14"
+    "contact_id": "11"
   },
   {
     "id": "ward12",
@@ -97,17 +110,6 @@
     "twitter": "@JohnPYYC",
     "risk_description": "Business-minded newcomer; potentially open to density if framed as 'Freedom to Build'.",
     "contact_id": "6"
-  },
-  {
-    "id": "ward5",
-    "name": "Raj Dhaliwal",
-    "ward": "Ward 5",
-    "riskLevel": "Medium",
-    "tag": "The Swing Vote",
-    "email": "ward5@calgary.ca",
-    "twitter": "@RajDhaliwalYYC",
-    "risk_description": "Incumbent balancing ward pressure; needs to see the 'Taxpayer Penalty' numbers.",
-    "contact_id": "5"
   },
   {
     "id": "ward3",
