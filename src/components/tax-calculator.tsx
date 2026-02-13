@@ -45,11 +45,11 @@ export function TaxCalculator() {
               Interactive Calculator
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-cchc-blue mb-4">
-              Your Personal <span className="text-cchc-gold">Tax Penalty</span>
+              The $861M <span className="text-cchc-red">Incompetence Surcharge</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              If Council votes to repeal rezoning, Calgary loses $861 million in federal funding.
-              See how much YOUR property taxes could increase to cover this loss.
+              If Council votes to strip your property rights, Calgary loses $861 million in federal funding.
+              See how much YOUR property taxes could increase to cover their incompetence.
             </p>
           </div>
 
@@ -97,7 +97,7 @@ export function TaxCalculator() {
                     <div className="text-center space-y-4">
                       <div className="flex items-center justify-center gap-2 text-cchc-red">
                         <TrendingUp className="h-6 w-6" />
-                        <span className="font-bold uppercase tracking-wide">Your Annual Tax Increase</span>
+                        <span className="font-bold uppercase tracking-wide">Your Annual Incompetence Surcharge</span>
                       </div>
 
                       <div className="text-6xl md:text-7xl font-bold text-cchc-red">
@@ -107,7 +107,7 @@ export function TaxCalculator() {
                       <div className="text-lg text-gray-700">
                         <p className="font-semibold">Over 5 years: <span className="text-cchc-red">${(penalty * 5).toLocaleString()}</span></p>
                         <p className="text-sm mt-2 text-gray-600">
-                          Based on recovering the $861M federal funding loss across Calgary households
+                          The cost of City Hall&apos;s incompetence, spread across Calgary households
                         </p>
                       </div>
 
@@ -137,8 +137,8 @@ export function TaxCalculator() {
                 <div className="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
                   <p className="text-sm text-gray-700">
                     <strong>How we calculate:</strong> Based on the estimated property tax surcharge needed to
-                    recover the $861 million federal funding loss over 5 years. Your annual increase is calculated
-                    as (Home Value × 1.25%) ÷ 5 years.
+                    recover the $861 million federal funding loss over 5 years when Council bans homes on your land.
+                    Your annual surcharge is calculated as (Home Value × 1.25%) ÷ 5 years.
                   </p>
                 </div>
               </div>
