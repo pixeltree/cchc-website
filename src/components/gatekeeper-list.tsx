@@ -35,13 +35,6 @@ export function GatekeeperList() {
     }
   };
 
-  const handleTwitter = (twitter: string) => {
-    const tweetText = encodeURIComponent(
-      `${twitter} Don't burn $861M of our federal housing money! Vote NO on repealing rezoning. Calgary taxpayers are watching! #StopTheBan #yyccc`
-    );
-    window.open(`https://twitter.com/intent/tweet?text=${tweetText}`, '_blank');
-  };
-
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({
@@ -147,15 +140,23 @@ export function GatekeeperList() {
                         Email This Office
                       </Button>
                     </a>
-                    <Button
-                      onClick={() => handleTwitter(councillor.twitter)}
-                      variant="outline"
-                      size="sm"
-                      className="w-full border-cchc-blue text-cchc-blue hover:bg-cchc-blue hover:text-white"
+                    <a
+                      href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                        `${councillor.twitter} Don't cost Calgary $861M in federal funding! Vote NO on repealing rezoning. Taxpayers are watching! #StopTheBan #yyccc`
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
                     >
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Post on X/Twitter
-                    </Button>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="w-full border-cchc-blue text-cchc-blue hover:bg-cchc-blue hover:text-white"
+                      >
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        Post on X/Twitter
+                      </Button>
+                    </a>
                   </div>
 
                   {councillor.riskLevel === "Critical" && (
