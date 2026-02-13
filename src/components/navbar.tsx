@@ -33,9 +33,11 @@ export function Navbar() {
             <Link href="#gatekeepers" className="hover:text-cchc-gold transition-colors font-medium">
               Gatekeeper Watch
             </Link>
-            <Button variant="gold" size="lg">
-              Donate
-            </Button>
+            <Link href="https://www.calgary.ca/council/dyncrm-councillors-contact.html" target="_blank" rel="noopener noreferrer">
+              <Button variant="gold" size="lg">
+                Contact Your Councillor
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -78,9 +80,11 @@ export function Navbar() {
             >
               Gatekeeper Watch
             </Link>
-            <Button variant="gold" size="lg" className="w-full mt-2">
-              Donate
-            </Button>
+            <Link href="https://www.calgary.ca/council/dyncrm-councillors-contact.html" target="_blank" rel="noopener noreferrer" className="block mt-2">
+              <Button variant="gold" size="lg" className="w-full">
+                Contact Your Councillor
+              </Button>
+            </Link>
           </div>
         )}
       </div>

@@ -48,14 +48,22 @@ export function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-cchc-gold transition-colors">
-                    Download Email Template
+                  <a
+                    href="https://www.calgary.ca/council/dyncrm-councillors-contact.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-cchc-gold transition-colors"
+                  >
+                    Contact Your Councillor
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-cchc-gold transition-colors">
+                  <button
+                    onClick={shareOnTwitter}
+                    className="hover:text-cchc-gold transition-colors text-left"
+                  >
                     Share This Page
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -113,7 +121,11 @@ export function Footer() {
             <p className="mb-4">
               The Public Hearing is March 23, 2026. Make your voice heard before it&apos;s too late.
             </p>
-            <Button variant="outline" className="border-2 border-cchc-blue bg-transparent hover:bg-cchc-blue hover:text-white">
+            <Button
+              variant="outline"
+              className="border-2 border-cchc-blue bg-transparent hover:bg-cchc-blue hover:text-white"
+              onClick={() => window.open('https://www.calgary.ca/council/dyncrm-councillors-contact.html', '_blank')}
+            >
               <Mail className="mr-2 h-4 w-4" />
               Send Letter to Council Now
             </Button>
