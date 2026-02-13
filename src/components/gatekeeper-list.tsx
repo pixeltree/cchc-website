@@ -11,6 +11,7 @@ interface Councillor {
   ward: string;
   riskLevel: string;
   tag: string;
+  description?: string;
   email: string;
   twitter: string;
   risk_description: string;
@@ -87,13 +88,29 @@ export function GatekeeperList() {
                         {councillor.ward}
                       </CardDescription>
                     </div>
-                    <div className={`px-3 py-1 rounded-full text-xs font-bold border-2 ${getRiskColor(councillor.riskLevel)}`}>
-                      {councillor.riskLevel} Risk
+                    <div className="flex flex-col items-end gap-1">
+                      <div className={`px-3 py-1 rounded-full text-xs font-bold border-2 ${getRiskColor(councillor.riskLevel)}`}>
+                        {councillor.riskLevel} Risk
+                      </div>
+                      {councillor.tag === "Swing Vote" && (
+                        <div className="inline-flex items-center gap-1 px-2 py-1 bg-purple-600 text-white text-xs font-bold rounded-full">
+                          🔄 SWING VOTE
+                        </div>
+                      )}
                     </div>
                   </div>
-                  {councillor.tag && (
-                    <div className="mt-2 text-sm font-semibold text-cchc-blue italic">
-                      "{councillor.tag}"
+                  {councillor.tag && councillor.tag === "Swing Vote" && councillor.description && (
+                    <div className="mt-2">
+                      <div className="text-sm font-semibold text-cchc-blue italic">
+                        "{councillor.description}"
+                      </div>
+                    </div>
+                  )}
+                  {councillor.tag && councillor.tag !== "Swing Vote" && (
+                    <div className="mt-2">
+                      <div className="text-sm font-semibold text-cchc-blue italic">
+                        "{councillor.tag}"
+                      </div>
                     </div>
                   )}
                   {councillor.risk_description && (

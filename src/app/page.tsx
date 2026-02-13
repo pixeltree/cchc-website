@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
+import { Countdown } from "@/components/countdown";
 import { TaxCalculator } from "@/components/tax-calculator";
 import { ExpertSection } from "@/components/expert-section";
 import { PropertyRightsManifesto } from "@/components/property-rights-manifesto";
@@ -11,6 +12,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
+      <Countdown />
       <TaxCalculator />
       <ExpertSection />
       <PropertyRightsManifesto />
