@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Andre Chabot",
+    "ward": "Ward 10",
+    "riskLevel": "High",
+    "email": "wardten@calgary.ca",
+    "twitter": "@Chabot4Calgary"
+  },
+  {
+    "id": 2,
+    "name": "Dan McLean",
+    "ward": "Ward 13",
+    "riskLevel": "High",
+    "email": "wardthirteen@calgary.ca",
+    "twitter": "@DanMcLeanYYC"
+  },
+  {
+    "id": 3,
+    "name": "Sean Chu",
+    "ward": "Ward 4",
+    "riskLevel": "Medium",
+    "email": "wardfour@calgary.ca",
+    "twitter": "@SeanChuWard4"
+  }
+]
