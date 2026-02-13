@@ -36,6 +36,18 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# Personal identification files
+*.key
+*.cert
+*.p12
+*.pfx
+.git-credentials
+.npmrc
+
+# Analytics and tracking
+.vercel-analytics-id
+google-analytics.json
+
 # vercel
 .vercel
 

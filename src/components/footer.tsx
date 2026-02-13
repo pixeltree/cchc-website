@@ -122,14 +122,15 @@ export function Footer() {
           {/* Bottom Bar */}
           <div className="border-t border-white/20 pt-8 text-center text-gray-300 text-sm">
             <p>
-              © {currentYear} Calgary Conservative Housing Coalition. All rights reserved.
+              © {currentYear} Calgary Conservative Housing Coalition. A grassroots advocacy campaign.
             </p>
             <p className="mt-2">
-              This is a grassroots advocacy campaign. Not affiliated with any political party.
+              This site is operated by concerned Calgary taxpayers. Not affiliated with any political party or organization.
             </p>
             <p className="mt-4 text-xs">
               <strong>Disclaimer:</strong> Tax calculations are estimates based on proportional distribution
-              of the $861M federal funding loss. Actual tax impacts may vary.
+              of the $861M federal funding loss. Actual tax impacts may vary. This site is for informational
+              and advocacy purposes only.
             </p>
           </div>
         </div>
@@ -137,6 +138,7 @@ export function Footer() {
     </footer>
   );
 }
+
 
 
 

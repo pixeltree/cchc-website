@@ -15,7 +15,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "CCHC - Stop the $1 Billion Taxpayer Penalty",
   description: "Calgary Conservative Housing Coalition: Don't let City Council waste $861M in federal funding. Calculate your tax penalty and contact your councillor before March 23, 2026.",
-  keywords: "Calgary, housing, rezoning, property tax, City Council, property rights, fiscal responsibility",
+  robots: "noindex, nofollow",
+  authors: [],
 };
 
 export default function RootLayout({
