@@ -6,12 +6,15 @@ import { AlertTriangle, Mail, ExternalLink } from "lucide-react";
 import councillorsData from "@/data/councillors.json";
 
 interface Councillor {
-  id: number;
+  id: string;
   name: string;
   ward: string;
   riskLevel: string;
+  tag: string;
   email: string;
   twitter: string;
+  risk_description: string;
+  contact_id: string;
 }
 
 export function GatekeeperList() {
@@ -19,6 +22,8 @@ export function GatekeeperList() {
 
   const getRiskColor = (level: string) => {
     switch (level) {
+      case "Critical":
+        return "bg-red-600 text-white border-red-800";
       case "High":
         return "bg-red-100 text-red-800 border-red-300";
       case "Medium":
@@ -90,6 +95,18 @@ export function GatekeeperList() {
                       {councillor.riskLevel} Risk
                     </div>
                   </div>
+                  {councillor.tag && (
+                    <div className="mt-2 text-sm font-semibold text-cchc-blue italic">
+                      "{councillor.tag}"
+                    </div>
+                  )}
+                  {councillor.risk_description && (
+                    <div className="mt-2 p-3 bg-cchc-blue/10 rounded-md border border-cchc-blue/30">
+                      <p className="text-xs text-cchc-blue leading-relaxed">
+                        {councillor.risk_description}
+                      </p>
+                    </div>
+                  )}
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="text-sm text-gray-600 space-y-1">
@@ -124,6 +141,11 @@ export function GatekeeperList() {
                     </Button>
                   </div>
 
+                  {councillor.riskLevel === "Critical" && (
+                    <div className="mt-3 p-2 bg-red-700 border border-red-900 rounded text-xs text-white font-bold">
+                      <strong>⚠️ CRITICAL PRIORITY:</strong> This councillor is leading the repeal effort and must be contacted IMMEDIATELY!
+                    </div>
+                  )}
                   {councillor.riskLevel === "High" && (
                     <div className="mt-3 p-2 bg-red-50 border border-red-200 rounded text-xs text-red-800">
                       <strong>High Priority:</strong> This councillor needs to hear from constituents NOW!
