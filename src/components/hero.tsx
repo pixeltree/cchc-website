@@ -29,17 +29,17 @@ export function Hero() {
           {/* Main Headline */}
           <div className="space-y-4">
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              Stop the <span className="text-cchc-gold">$1 Billion</span>
+              STOP THE <span className="text-cchc-red">TAKING</span>
             </h1>
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              Taxpayer Penalty
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+              Don&apos;t Let City Hall Strip Your Property Rights
             </h1>
           </div>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            City Council is voting to bring back the <span className="text-cchc-gold font-bold">&quot;Housing Ban.&quot;</span>
-            {" "}Don&apos;t let them set fire to our federal funding and hike your property taxes.
+            City Council wants to ban homes on <span className="text-cchc-gold font-bold">YOUR land.</span>
+            {" "}They&apos;re picking winners and losers while taxpayers foot the $861M bill.
           </p>
 
           {/* Countdown to Hearing */}

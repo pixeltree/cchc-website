@@ -24,7 +24,7 @@ export function ExpertSection() {
             {/* Center - Quote */}
             <div className="lg:col-span-6">
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                The Economic Truth: <span className="text-cchc-gold">Zoning is a Tax on Families</span>
+                The Economic Truth: <span className="text-cchc-gold">Government Barriers</span>
               </h3>
               <blockquote className="border-l-4 border-cchc-gold pl-4 mb-4">
                 <p className="text-lg text-gray-200 italic leading-relaxed">
@@ -35,8 +35,8 @@ export function ExpertSection() {
                 <span className="font-semibold text-white">Steven Globerman</span>, Senior Fellow, Fraser Institute
                 <span className="text-gray-400 ml-2">• Feb 11, 2026</span>
               </div>
-              <p className="text-sm text-gray-300 mt-3 italic">
-                Leading economists agree: Exclusionary zoning is just government red tape that restricts supply and drives up costs for everyone.
+              <p className="text-sm text-cchc-gold mt-3 font-semibold">
+                When the government bans certain homes, they are picking winners and losers with YOUR land.
               </p>
             </div>
 
